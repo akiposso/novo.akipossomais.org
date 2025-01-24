@@ -24,9 +24,8 @@ Junte-se à comunidade AKIPOSSO+ e abra portas para um futuro mais próspero. Ac
 Com o App AKIPOSSO+, você terá acesso a uma variedade de oportunidades, desde empregos e cursos até parcerias de negócios e eventos. Não perca tempo e faça o download agora mesmo para começar a transformar sua vida e aproveitar todas as oportunidades que o AKIPOSSO+ tem a oferecer. A comunidade está pronta para recebê-lo de braços abertos!
 
 
-{{< rawhtml >}}
-<a class="btn site-menu" data-title-anchor="conheça-mais" href="#conhe%c3%a7a-mais">Baixe o app aqui</a>
-{{< /rawhtml >}}
+<a class="btn site-menu" href="https://play.google.com/store/apps/details?id=org.akipossomais.nativo" target="_blank">Baixe o app aqui</a>
+
 {{% /column %}}
 {{% column %}}
 

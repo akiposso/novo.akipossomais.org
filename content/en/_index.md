@@ -10,7 +10,7 @@ header_logo: "images/logo-trimmed.png"
 #
 # Headers are safeHTML, you can use HTML tags such as b,i,u,br
 header_headline: "Seu futuro mais justo e próspero na palma da sua mão!"
-header_subheadline: "<a class='btn btn-highlight site-menu'  href='https://play.google.com/store/apps/details?id=org.akipossomais.nativo'><i class='fa fa-arrow-alt-circle-down'></i> Baixe agora nosso app</a><br><br>"
+header_subheadline: "<a class='btn btn-highlight site-menu'  href='https://play.google.com/store/apps/details?id=org.akipossomais.nativo' target='_blank'><i class='fa fa-arrow-alt-circle-down'></i> Baixe agora nosso app</a><br><br>"
 
 # Add a 'Go back to top' item to the navigation menu
 # Title: name of navigation menu entry
