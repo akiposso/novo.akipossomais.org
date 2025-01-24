@@ -1,0 +1,163 @@
+<!-- A partial to be overwritten by the user.
+     Its content will appear before the closing </head>-tag -->
+
+
+<!-- Custom CSS via inline styles
+     You may use this template to add custom CSS to your site like so: -->
+<style>
+:root {
+    /* see variables.scss for more variables*/
+
+    
+    --section-light-bg-color: #FFE255!important;
+    --section-light-text-color: #000000!important;
+    --section-dark-bg-color: #29408C!important;
+    --section-dark-text-color: #fff!important;
+    --cover-text-color: #fff!important;
+    --highlight: #29408C !important;
+
+     /* define list element for unnumbered lists, leave empty for default list element */
+     /* fa-asterisk is the default icon if this variable definition is missing completely */
+     --ul-li-icon: fa-dashcube;     /* this sets fa-dashcube as list icon */
+     --ul-li-icon: ;                /* this sets the default html list icon */
+}
+
+#site-head .blog-title, 
+#site-head.withCenteredImage .blog-title,
+#site-head .blog-description, 
+#site-head.withCenteredImage .blog-description { 
+     text-shadow: none !important;
+}
+
+.btn-highlight {
+     background: #FFE255 !important;
+     color: black !important;
+     font-weight: bold !important;
+     animation: glow 10s infinite;
+}
+
+@keyframes glow {
+     0% {
+          box-shadow: 0 0 10px #FABA2D;
+     }
+     50% {
+          box-shadow: 0 0 20px #FABA2D;
+     }
+     100% {
+          box-shadow: 0 0 10px #FABA2D;
+     }
+}
+
+article {
+     max-width: none !important;
+     width: 78% !important;
+}
+
+.fixed-nav {
+     background-color: #FABA2D !important;
+}
+
+/* .col-4 {
+  float: left;
+  width: 33%;
+}
+
+.col-3 {
+  float: left;
+  width: 25%;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+} */
+
+.row {
+     display: grid;
+     /* gap: 3rem; */
+}
+
+.row-center {
+     align-items:center;
+}
+
+.row ul {
+     padding: 0;
+}
+
+.download-link {
+     margin-top: 15px;
+     font-weight: 1100;
+}
+
+@media (min-width: 1000px) {
+  .row3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .row2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.column {
+     /* border: rgba(0, 0, 0, 0.1) solid 1px; */
+     padding: 1rem;
+}
+
+  a.btn, #site-languages .btn-lang {
+    font-family: "Oswald", sans-serif;
+  }
+
+  a.btn {
+    text-decoration: none;
+    background-color: var(--highlight);
+    color: var(--highlight-contrast);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+    &:hover {
+      color: var(--highlight-inverse-contrast);
+      background-color: var(--highlight-inverse);
+    }
+  }
+
+
+/* Clear floats after the columns
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+</style>
+
+<!-- Custom CSS via "custom.css"-file
+     If you would rather place your custom CSS into
+     a separate file, create a "custom.css" in your
+     local "static/css"-directory. Then add a <link>-tag
+     referencing your "custom.css" like so: -->
+
+<!-- <link rel="stylesheet" href='{{ "css/custom.css" | absURL }}'> -->
+
+<!-- Custom CSS: Color Codes
+     You may checkout https://htmlcolorcodes.com/ to get those
+     weird color codes (like "#22343A") ;-). -->
+
+<!-- Custom link-tags for different icons
+     Generated via https://favicon.io/favicon-generator/ -->
+
+{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
+{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
+<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}
+
