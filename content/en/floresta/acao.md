@@ -2,7 +2,7 @@
 title: Desconto+ Social
 date: 2025-01-28
 share: false
-slug: acao
+slug: floresta/acao
 ---
 <style>
     main .container:last-child {
